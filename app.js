@@ -77,10 +77,10 @@ agregarValores: function (){
 					this.valorVisor = "";
 					this.valorVisor = this.valorVisor + valor;
 				} else {
-					this.valorVisor = + valor;
+					this.valorVisor = this.valorVisor + valor;
 				}
 			this.actualizarVisor();
-			}
+		}
 		},
 
 		ingresarOperacion: function(oper){
@@ -104,7 +104,7 @@ agregarValores: function (){
 			if (this.resultado.toString().length < 9){
 				this.valorVisor = this.resultado.toString();
 			} else {
-				this.valorVisor = this.resultado.toString().slice(0,8) + "...";
+				this.valorVisor = this.resultado.toString().slice(0,8);
 			}
 			this.auxTeclaIgual = true;
 			this.actualizarVisor();

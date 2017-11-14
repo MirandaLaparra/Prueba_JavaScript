@@ -12,6 +12,7 @@ init: (function() {
 	this.agregarValores();
 }),
 
+
 agregarValores: function (){
 	document.getElementById("0").addEventListener("click", function() {calculadora.ingresoNumero("0");});
 	document.getElementById("1").addEventListener("click", function() {calculadora.ingresoNumero("1");});
@@ -32,7 +33,6 @@ agregarValores: function (){
 	document.getElementById("menos").addEventListener("click", function() {calculadora.ingresarOperacion("-");});
 	document.getElementById("mas").addEventListener("click", function() {calculadora.ingresarOperacion("+");});
 	},
-
 //6
 		borrarVisor: function(){
 			this.valorVisor = "0";
@@ -46,7 +46,7 @@ agregarValores: function (){
 			this.actualizarVisor();
 		},
 //7
-		ingresoDecimal: function(){
+		puntoDecimal: function(){
 			if (this.valorVisor.indexOf(".")== -1) {
 				if (this.valorVisor == ""){
 					this.valorVisor = this.valorVisor + "0.";
@@ -129,7 +129,5 @@ agregarValores: function (){
 		actualizarVisor: function(){
 			this.visor.innerHTML = this.valorVisor;
 		}
-
 		};
-
 		calculadora.init();
